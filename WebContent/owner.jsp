@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title></title>
+<title>owner</title> <!-- changes made in 3rd commit -->
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/cufon-yui.js"></script>
@@ -26,9 +26,6 @@
       </div>
       <div class="menu_nav">
         <ul>
-          
-
-            <li><a href="user_rights.jsp">Consumer</a></li>
           <li><a href="logoutservlet">Logout</a></li>
          
         </ul>
