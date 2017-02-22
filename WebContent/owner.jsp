@@ -42,7 +42,7 @@ function validate(){
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">Attribute Based Encryption on CLoud</a></h1>
+        <h1><a href="index.html">Attribute Based Encryption on Cloud</a></h1>
         <h2>Hello, <%= session.getAttribute( "uname" ) %></h2>
       </div>
       <div class="menu_nav">
