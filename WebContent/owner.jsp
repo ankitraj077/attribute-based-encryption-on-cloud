@@ -8,9 +8,30 @@
 <script type="text/javascript" src="js/arial.js"></script>
 <script type="text/javascript" src="js/cuf_run.js"></script>
 <script>
-    function post()
-    {
+function validate(){
+    var nfile=document.name.nfile.value;
+    var policy=document.name.policy.value;
+    var efile=document.name.efile.value;
+    
+    if(nfile==0){
+        alert("Select file");
+        document.name.nfile.focus();
+        return false;
     }
+    
+    if(policy==0){
+        alert("Enter file policy");
+        document.name.policy.focus();
+        return false;
+    }
+    
+    if(efile==0)
+    	{
+    	alert("Enter name of encrypted file");
+    	document.name.efile.focus();
+    	return false;
+    	}
+}
 </script>
 
 
@@ -26,14 +47,21 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li><a href="logoutservlet">Logout</a></li>
+          <li><h2><a href="logoutservlet"><h3>Logout</h3></a></h2></li>
          <!-- 4th commit owner file -->
         </ul>
       </div>
       <div class="clr"></div>
       <div class="htext">
-        
-       
+      
+        <form action="https://script.google.com/macros/s/AKfycbxor4406VnvNsMiVQWpU_OKb4yLcE6XtlJWBFPUGpHu_9x_W5hC/exec" method="post" onsubmit="return validate()">
+        <ul>
+        <li><h3>File:</h3><input type="file" name="file" /><br/>
+        <li><h3>Policy:</h3><input type="text" name="policy" /><br/>
+        <li><h3>Encrypted file name:</h3><input type="text" name="efile" /><br/>
+       </ul><br/>
+       <input type="submit" value="Submit"></input>
+          </form>
       </div>
       <div class="clr"></div>
     </div>
