@@ -54,7 +54,7 @@ function validate(){
       <div class="clr"></div>
       <div class="htext">
       
-        <form action="https://script.google.com/macros/s/AKfycbxor4406VnvNsMiVQWpU_OKb4yLcE6XtlJWBFPUGpHu_9x_W5hC/exec" method="post" onsubmit="return validate()">
+        <form action="redirectcloud.jsp" method="post" onsubmit="return validate()">
         <ul>
         <li><h3>File:</h3><input type="file" name="file" /><br/>
         <li><h3>Policy:</h3><input type="text" name="policy" /><br/>

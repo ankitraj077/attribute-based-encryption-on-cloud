@@ -46,7 +46,7 @@
          con.close();
          if(i!=0){
        out.println("<script>alert('registered')</script>");
-      //"ankit" response.sendRedirect("aa.jsp?msg=registered sucess..!");
+      response.sendRedirect("index.html?msg=registered sucess..!");
             }
    }
  
