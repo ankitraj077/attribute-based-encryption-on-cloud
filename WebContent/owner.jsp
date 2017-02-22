@@ -29,7 +29,6 @@
           
 
             <li><a href="user_rights.jsp">Consumer</a></li>
-          <li><a href="cakey_send.jsp">Owner</a></li>
           <li><a href="logoutservlet">Logout</a></li>
          
         </ul>
