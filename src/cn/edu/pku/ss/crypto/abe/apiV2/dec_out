@@ -1,0 +1,10 @@
+Architecture of a Metasearch engine
+A metasearch engine (or aggregator) is a search tool that uses another search engine's data to produce their own results from the Internet.[1][2] Metasearch engines take input from a user and simultaneously send out queries to third party search engines for results. Sufficient data is gathered, formatted by their ranks and presented to the users.
+However, Metasearch also has issues. Scores of websites stored on search engines are all different: this can draw in irrelevant documents. Other problems such as spamming also significantly reduce the accuracy of the search.[3] The process of fusion aims to tackle this issue and improve the engineering of a metasearch engine.[4]
+
+
+A Web crawler is an Internet bot which systematically browses the World Wide Web, typically for the purpose of Web indexing.
+Web search engines and some other sites use Web crawling or spidering software to update their web content or indexes of others sites' web content. Web crawlers can copy all the pages they visit for later processing by a search engine which indexes the downloaded pages so the users can search much more efficiently.
+Crawlers consume resources on the systems they visit and often visit sites without tacit approval. Issues of schedule, load, and "politeness" come into play when large collections of pages are accessed. Mechanisms exist for public sites not wishing to be crawled to make this known to the crawling agent.
+As the number of pages on the internet is extremely large, even the largest crawlers fall short of making a complete index.
+Crawlers can validate hyperlinks and HTML code. They can also be used for web scraping (see also data-driven programming).
