@@ -30,8 +30,7 @@ public class Example {
 	   //  Database credentials
 	   static final String USER = "root";
 	   static final String PASS = "root";
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		Server server = new Server();
 	//	Client PKUClient = new Client(new String[]{"PKU", "Student"});
 	//	Client THUClient = new Client(new String[]{"THU", "Student"});
@@ -50,7 +49,7 @@ public class Example {
 	//	SKJSONString = server.generateSecretKey(THUClient.getAttrs());
 	//	THUClient.setSK(SKJSONString);
 		
-		String SKJSONString = server.generateSecretKey(TeacherClient.getAttrs());
+		 String SKJSONString = server.generateSecretKey(TeacherClient.getAttrs());
 		System.out.println(SKJSONString);
 		TeacherClient.setSK(SKJSONString);
 		 Connection conn = null;
@@ -71,7 +70,7 @@ public class Example {
 		      String sql = "insert into data(masterkey, publickey, secretkey) values (?, ?, ?)";
 		      PreparedStatement preparedStatement = conn.prepareStatement(sql);
 		      preparedStatement.setString(1, MKJSONString );
-		      preparedStatement.setString(2, PKJSONString );
+		     preparedStatement.setString(2, PKJSONString );
 		      preparedStatement.setString(3, SKJSONString );
 		      preparedStatement.execute();
 		    

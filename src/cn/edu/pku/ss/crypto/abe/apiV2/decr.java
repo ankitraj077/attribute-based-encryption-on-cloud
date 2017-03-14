@@ -33,7 +33,7 @@ public class decr {
 		      System.out.println("Connected database successfully...");
 		      
 		      //STEP 4: Execute a query
-		      System.out.println("Fetching from records into the table...");
+		      System.out.println("Inserting records into the table...");
 		    //  stmt = conn.createStatement();
 		      
 		      String sql = "select * from data";
