@@ -1,4 +1,5 @@
 <!DOCTYPE>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>owner</title> <!-- changes made in 3rd commit -->
@@ -54,12 +55,15 @@ function validate(){
       <div class="clr"></div>
       <div class="htext">
       
-        <form action="redirectcloud.jsp" method="post" onsubmit="return validate()">
+        <form action="owner12.jsp" name=name method="post" onsubmit="return validate()">
         <ul>
         <li><h3>File:</h3><input type="file" name="file" /><br/>
         <li><h3>Policy:</h3><input type="text" name="policy" /><br/>
         <li><h3>Encrypted file name:</h3><input type="text" name="efile" /><br/>
        </ul><br/>
+       
+       <!-- ANKIT CHANGED -->
+
        <input type="submit" value="Submit"></input>
           </form>
       </div>

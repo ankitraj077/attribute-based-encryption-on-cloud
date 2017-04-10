@@ -20,9 +20,21 @@
 </servlet>  
   
 <servlet-mapping>  
-<servlet-name>logoutervlet</servlet-name>  
+<servlet-name>logoutservlet</servlet-name>  
 <url-pattern>src/logoutservlet</url-pattern>  
-</servlet-mapping>  
+</servlet-mapping> 
+
+ <servlet>
+    <servlet-name>OwnerServlet</servlet-name>
+    <servlet-class>OwnerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>OwnerServlet</servlet-name>
+    <url-pattern>src/OwnerServlet</url-pattern>
+  </servlet-mapping>
+  
+   
  <!--   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>

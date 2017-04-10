@@ -38,7 +38,7 @@ public class Client {
 	
 	public String[] getAttrs(){
 
-	//	System.out.println(attrs);
+		System.out.println("checking attributes:"+attrs);
 		return attrs;
 	}
 	

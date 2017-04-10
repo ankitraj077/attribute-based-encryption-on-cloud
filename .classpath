@@ -13,9 +13,26 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/hp pc/Downloads/Compressed/cos.jar/cos.jar"/>
-	<classpathentry kind="lib" path="/cpabe-java/lib/fastjson-1.1.41.jar" sourcepath="C:/Users/wenzilong/.m2/repository/com/alibaba/fastjson/1.1.41/fastjson-1.1.41-sources.jar"/>
-	<classpathentry kind="lib" path="/cpabe-java/lib/jpbc-api-2.0.0.jar"/>
-	<classpathentry kind="lib" path="/cpabe-java/lib/jpbc-plaf-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hp pc/Downloads/Compressed/cos.jar/cos.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/cpabe-java/lib/fastjson-1.1.41.jar" sourcepath="C:/Users/wenzilong/.m2/repository/com/alibaba/fastjson/1.1.41/fastjson-1.1.41-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/cpabe-java/lib/jpbc-api-2.0.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/cpabe-java/lib/jpbc-plaf-2.0.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/cpabe-java/cpabe.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

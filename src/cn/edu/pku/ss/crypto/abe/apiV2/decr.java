@@ -11,18 +11,27 @@ import java.sql.Statement;
 import cn.edu.pku.ss.crypto.abe.Parser;
 import cn.edu.pku.ss.crypto.abe.Policy;
 public class decr {
-	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	   static final String DB_URL = "jdbc:mysql://localhost:3306/mydb";
+	 String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+	  String DB_URL = "jdbc:mysql://localhost:3306/myfdb";
 
 	   //  Database credentials
-	   static final String USER = "root";
-	   static final String PASS = "root";
-	public static void main(String[] args) {
-		
+	   String USER = "root";
+	   String PASS = "root";
+	//public static void main(String[] args) 
+	   //public static void main(String[] a)
+	   public void decryp(String pol, String file)
+	   {
+		   System.out.println(file+" this is here "+pol);
 		String PKStin= null;
 		String SKStin=null;
 		Connection conn = null;
 		   Statement stmt = null;
+		   int i=file.lastIndexOf("\\");
+		   //int k=file.length();
+		   
+		   String flname=file.substring(i+1);
+		   System.out.println(flname);
+		   
 		   try{
 		      //STEP 2: Register JDBC driver
 		      Class.forName("com.mysql.jdbc.Driver");
@@ -33,19 +42,22 @@ public class decr {
 		      System.out.println("Connected database successfully...");
 		      
 		      //STEP 4: Execute a query
-		      System.out.println("Inserting records into the table...");
+		     // System.out.println("Inserting records into the table...");
 		    //  stmt = conn.createStatement();
 		      
-		      String sql = "select * from data";
+		      String sql = "select masterkey,publickey,secretkey from data where encname=\""+flname+"\"";
 		      PreparedStatement preparedStatement = conn.prepareStatement(sql);
 		      ResultSet rs = preparedStatement.executeQuery(sql );
 		      while (rs.next()) {
 		    	  String MKStin = rs.getString("masterkey");
 		      	 PKStin = rs.getString("publickey");
 		      	 SKStin = rs.getString("secretkey");
+		      	System.out.println(MKStin);
+		      	System.out.println(PKStin);
+		      	System.out.println(SKStin);
 		      }
 		    
-		      System.out.println("Inserted records into the table...");
+		      //System.out.println("Inserted records into the table...");
 
 		   }catch(SQLException se){
 		      //Handle errors for JDBC
@@ -70,7 +82,7 @@ public class decr {
 		   System.out.println("Goodbye!");
 		
 		   Server server = new Server();
-		Client TeacherClient = new Client(new String[]{"Teacher"});
+		Client TeacherClient = new Client(new String[]{pol});
 		
 		
 	//	Server server = new Server();
@@ -78,10 +90,12 @@ public class decr {
 		//	Client THUClient = new Client(new String[]{"THU", "Student"});
 		//	Client TeacherClient = new Client(new String[]{ "Teacher"});
 			
-		  	String PKJSONString = server.getPublicKeyInString();
-			String MKJSONString = server.getMasterKeyInString();
+		  String PKJSONString = server.getPublicKeyInString();
+		  String MKJSONString = server.getMasterKeyInString();
 			//PKUClient.setPK(PKJSONString);
 		//	THUClient.setPK(PKJSONString);
+			
+			//String PKJSONString=PKStin;
 			TeacherClient.setPK(PKJSONString);
 
 			
@@ -91,17 +105,21 @@ public class decr {
 		//	SKJSONString = server.generateSecretKey(THUClient.getAttrs());
 		//	THUClient.setSK(SKJSONString);
 			
-			 String SKJSONString = server.generateSecretKey(TeacherClient.getAttrs());
+		    String SKJSONString = server.generateSecretKey(TeacherClient.getAttrs());
+		//	String SKJSONString=SKStin;
 			System.out.println(SKJSONString);
 			TeacherClient.setSK(SKJSONString);
-		File	in = new File("demo.txt");
+		
+		//ankit	File	in = new File(file);
+			File	in = new File(file);
 //			THUClient.dec(in);
+		
 		int x=TeacherClient.dec(in);
 		if(x==1)
 		{
 			TeacherClient.setPK(PKStin);
 			TeacherClient.setSK(SKStin);
-			int z=TeacherClient.dec(in);
+			int z =TeacherClient.dec(in);
 		}
 		//TeacherClient.dec(in);
 		   }

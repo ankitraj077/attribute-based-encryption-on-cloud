@@ -3,6 +3,7 @@
 	<name>FinalYr1</name>
 	<comment></comment>
 	<projects>
+		<project>cpabe-java</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

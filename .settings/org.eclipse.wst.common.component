@@ -2,6 +2,9 @@
     <wb-module deploy-name="FinalYr1">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="cpabe-java.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cpabe-java/cpabe-java">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="FinalYr1"/>
         <property name="java-output-path" value="/FinalYr1/build/classes"/>
     </wb-module>

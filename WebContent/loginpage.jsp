@@ -28,7 +28,7 @@
         <ul>
           
 
-            <li><a href="user_rights.jsp">Consumer</a></li>
+            <li><a href="consumer.jsp">Consumer</a></li>
           <li><a href="owner.jsp">Owner</a></li>
           <li><a href="logoutservlet">Logout</a></li>
          
